@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DescribeAirlineCluster",
+      "Effect": "Allow",
+      "Action": "eks:DescribeCluster",
+      "Resource": "arn:aws:eks:ap-south-1:388305391507:cluster/airline-demo-eks"
+    },
+    {
+      "Sid": "ListPodIdentityAssociations",
+      "Effect": "Allow",
+      "Action": "eks:ListPodIdentityAssociations",
+      "Resource": "*"
+    },
+    {
+      "Sid": "DescribeALBPodIdentityAssociation",
+      "Effect": "Allow",
+      "Action": "eks:DescribePodIdentityAssociation",
+      "Resource": "arn:aws:eks:ap-south-1:388305391507:podidentityassociation/airline-demo-eks/a-mqcryvhzwl272gv1z"
+    },
+    {
+      "Sid": "DescribeRDSInstances",
+      "Effect": "Allow",
+      "Action": "rds:DescribeDBInstances",
+      "Resource": "*"
+    }
+  ]
+}
